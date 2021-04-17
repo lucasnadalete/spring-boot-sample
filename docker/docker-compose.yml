@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  postgres-db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: fatec
+      POSTGRES_USER: fatec
+      POSTGRES_DB: fatec

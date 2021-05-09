@@ -41,6 +41,7 @@ public class PdfPageController {
             ProcessPdfResponse response = pdfExtractorService.extractPagesOfPdfs();
             return new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
+            ex.printStackTrace();
             return new ResponseEntity<>(new ProcessPdfResponse(), HttpStatus.BAD_REQUEST);
         }
     }

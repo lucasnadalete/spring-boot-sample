@@ -11,8 +11,10 @@ import lombok.Data;
 public class ProcessPdfResponse {
     private Long numberOfPages;
     private ProcessStatus status;
+    private String files;
 
     public ProcessPdfResponse() {
+        files = "";
         numberOfPages = -1L;
         status = ProcessStatus.UNSUCCESS;
     }

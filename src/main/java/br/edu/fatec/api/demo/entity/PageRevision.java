@@ -26,6 +26,7 @@ public class PageRevision {
     private String fileName;
     private String revision;
 
+    @JsonIgnore
     public String getPathStorageFile() {
         if(getPdfPage() == null)
             return null;

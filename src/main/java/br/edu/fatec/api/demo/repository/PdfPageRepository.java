@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PdfPageRepository extends CrudRepository<PdfPage, Long> {
-    PdfPage findFirstByBlockAndAndCodeAndPage(String block, String code, Long page);
+    PdfPage findFirstByBlockAndCodeAndPage(String block, String code, Long page);
 }

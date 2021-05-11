@@ -21,7 +21,6 @@ import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
@@ -95,7 +94,7 @@ public class PdfPageService {
         log.info(pdfPage.toString());
         // Verifying if PdfPage already exists in List<PdfPage>
         PdfPage pdfPageFound = pdfPageRepository
-                .findFirstByBlockAndAndCodeAndPage(pdfPage.getBlock(), pdfPage.getCode(), pdfPage.getPage());
+                .findFirstByBlockAndCodeAndPage(pdfPage.getBlock(), pdfPage.getCode(), pdfPage.getPage());
         if(pdfPageList.contains(pdfPage)) {
             pdfPage = pdfPageList.get(pdfPageList.indexOf(pdfPage));
         } else {
